@@ -628,6 +628,7 @@ section#wrapper #main section#portfolio #Container .mix figure {
 section#wrapper #main section#portfolio #Container .mix figure img {
   max-width: 100%;
   border: solid 1px #eee;
+  cursor: pointer;
 }
 section#wrapper #main section#portfolio #Container .mix figure img:hover {
   border: solid 1px #ccc;
@@ -724,17 +725,18 @@ video#bgvid {
   -ms-filter: none;
   filter: none;
 }
-section#modal div {
+section#modal .inactive {
+  display: none;
+}
+section#modal .big {
   background: #fff;
   color: #000;
-  height: 100%;
-  width: 100%;
+  width: 90%;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 200;
+  left: 5%;
+  right: 5%;
+  z-index: 400;
   display: hidden;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -746,6 +748,9 @@ section#modal div {
   -o-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
   transform: translateY(-100%);
+  border: solid 1px #ddd;
+  overflow: visible;
+  min-height: 500px;
 }
 section#modal .activate {
   display: block;
@@ -754,6 +759,104 @@ section#modal .activate {
   -o-transform: translateY(0%);
   -ms-transform: translateY(0%);
   transform: translateY(0%);
+}
+section#modal .activate aside {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+section#modal .activate aside:before,
+section#modal .activate aside:after {
+  content: '';
+  display: table;
+}
+section#modal .activate aside:after {
+  clear: both;
+}
+section#modal .activate aside:last-child {
+  margin-right: 0%;
+}
+section#modal .activate aside h1 {
+  padding: 0;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.75em;
+}
+section#modal .activate aside p {
+  line-height: 1.7em;
+  font-size: 1.2em;
+  color: #aaa;
+}
+section#modal .activate aside .tagcloud {
+  padding-top: 20px;
+}
+section#modal .activate aside .tagcloud span {
+  color: #000;
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: #aaa;
+}
+section#modal .activate aside .tagcloud span:before {
+  font-family: FontAwesome;
+  content: '\f02b';
+  margin-right: 3px;
+}
+section#modal .activate article {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+section#modal .activate article:before,
+section#modal .activate article:after {
+  content: '';
+  display: table;
+}
+section#modal .activate article:after {
+  clear: both;
+}
+section#modal .activate article:last-child {
+  margin-right: 0%;
+}
+section#modal .activate article img {
+  max-width: 100%;
+  max-height: 100%;
+  border: solid 1px #ddd;
+}
+section#modal .content {
+  *zoom: 1;
+  width: auto;
+  max-width: 100%;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding: 5%;
+}
+section#modal .content:before,
+section#modal .content:after {
+  content: '';
+  display: table;
+}
+section#modal .content:after {
+  clear: both;
+}
+section#modal .closemodal {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  cursor: pointer;
+  font-size: 2em;
 }
 body.modal-open {
   overflow: hidden;

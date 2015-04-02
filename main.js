@@ -28,9 +28,39 @@ $(document).on('ready', function() {
     $("#modal2").addClass('activate');
     $("body").addClass("modal-open");
   });
+  $("a.3").click(function() {
+    $("#modal3").addClass('activate');
+    $("body").addClass("modal-open");
+  });
+  $("a.4").click(function() {
+    $("#modal4").addClass('activate');
+    $("body").addClass("modal-open");
+  });
+  $("a.5").click(function() {
+    $("#modal5").addClass('activate');
+    $("body").addClass("modal-open");
+  });
+  $("a.6").click(function() {
+    $("#modal6").addClass('activate');
+    $("body").addClass("modal-open");
+  });
+  $("a.7").click(function() {
+    $("#modal7").addClass('activate');
+    $("body").addClass("modal-open");
+  });
+  $("a.8").click(function() {
+    $("#modal8").addClass('activate');
+    $("body").addClass("modal-open");
+  });
   $(".closemodal").click(function() {
     $("#modal1").removeClass('activate');
     $("#modal2").removeClass('activate');
+    $("#modal3").removeClass('activate');
+    $("#modal4").removeClass('activate');
+    $("#modal5").removeClass('activate');
+    $("#modal6").removeClass('activate');
+    $("#modal7").removeClass('activate');
+    $("#modal8").removeClass('activate');
     $("body").removeClass("modal-open");
   });
 
