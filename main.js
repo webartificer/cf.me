@@ -7,6 +7,7 @@ function hideMobileMenu(init)
       $('.menuswitch').removeClass('active');
       $("header #hamburger a .on").show();
       $("header #hamburger a .off").hide();
+      $("body").removeClass("modal-open");
     }
 }
 
@@ -14,6 +15,7 @@ function hideMobileMenu(init)
 $(document).on('ready', function() {
   $( ".menuswitch" ).click(function() {
     $(".resmenu").toggleClass("mobilemenu");
+    $("body").toggleClass("modal-open");
     $(this).toggleClass("active");
     $("header #hamburger a .fa").toggle();
   });
