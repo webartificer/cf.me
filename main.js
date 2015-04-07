@@ -1,4 +1,4 @@
-
+// removes mobile menu when window is avove 600px wide
 function hideMobileMenu(init)
 {
     /*If browser resized, check width again */
@@ -13,13 +13,14 @@ function hideMobileMenu(init)
 
 
 $(document).on('ready', function() {
+  // toggles menu and hamburger icon
   $( ".menuswitch" ).click(function() {
     $(".resmenu").toggleClass("mobilemenu");
     $("body").toggleClass("modal-open");
     $(this).toggleClass("active");
     $("header #hamburger a .fa").toggle();
   });
-
+  // opens modals
   $("a.1").click(function() {
     $("#modal1").addClass('activate');
     $("body").addClass("modal-open");
@@ -52,6 +53,7 @@ $(document).on('ready', function() {
     $("#modal8").addClass('activate');
     $("body").addClass("modal-open");
   });
+  // closes modals
   $(".closemodal").click(function() {
     $("#modal1").removeClass('activate');
     $("#modal2").removeClass('activate');
@@ -63,6 +65,7 @@ $(document).on('ready', function() {
     $("#modal8").removeClass('activate');
     $("body").removeClass("modal-open");
   });
+
 
   $(window).resize(function() {
       hideMobileMenu(false);
