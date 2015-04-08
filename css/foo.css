@@ -160,7 +160,7 @@ header .resmenu {
   margin: 0;
   padding: 0;
   height: 65px;
-  overflow: scroll;
+  overflow: hidden;
 }
 @media only screen and (max-width: 600px) {
   header .resmenu {
